@@ -1,6 +1,7 @@
 <?php
 
 use Piwik\Container\StaticContainer;
+use Piwik\Intl\Locale;
 
 define('PIWIK_TEST_MODE', true);
 define('PIWIK_PRINT_ERROR_BACKTRACE', false);
@@ -55,6 +56,8 @@ foreach($fixturesToLoad as $fixturePath) {
         require_once $file;
     }
 }
+
+Locale::setDefaultLocale();
 
 function prepareServerVariables()
 {
