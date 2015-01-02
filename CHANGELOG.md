@@ -1,6 +1,15 @@
 # Piwik Platform Changelog
 
-This is a changelog for Piwik platform developers. All changes for our HTTP API's, Plugins, Themes, etc will be listed here. 
+This is a changelog for Piwik platform developers. All changes for our HTTP API's, Plugins, Themes, etc will be listed here.
+
+## Piwik 2.11.0
+
+### Breaking Changes
+* The following deprecated event has been removed: `TaskScheduler.getScheduledTasks`
+
+### Deprecations
+* The following classes have been deprecated:
+  * `Piwik\ScheduledTask`: use `Piwik\Scheduler\Task` instead
 
 ## Piwik 2.10.0
 
