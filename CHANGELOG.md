@@ -9,6 +9,7 @@ This is a changelog for Piwik platform developers. All changes for our HTTP API'
 
 ### Deprecations
 * The following classes have been deprecated:
+  * `Piwik\TaskScheduler`: use `Piwik\Scheduler\Scheduler` instead
   * `Piwik\ScheduledTask`: use `Piwik\Scheduler\Task` instead
 
 ## Piwik 2.10.0
