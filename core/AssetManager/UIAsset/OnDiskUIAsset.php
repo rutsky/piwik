@@ -103,7 +103,11 @@ class OnDiskUIAsset extends UIAsset
      */
     private function assetIsReadable()
     {
-        return is_readable($this->getAbsoluteLocation());
+        $location = $this->getAbsoluteLocation();
+
+        clearstatcache($clearRealPathCache = true, $location); // note: if $clearRealPathCache is false, $location is ignored
+
+        return is_readable($location);
     }
 
     public function getModificationDate()
